@@ -1,0 +1,269 @@
+{"timestamp":"2025-09-24T09:03:29.722Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T09:03:31.446Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T09:03:31.913Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T09:03:31.915Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T09:03:31.960Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T09:03:31.961Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T09:03:31.967Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T09:03:31.969Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T09:07:01.008Z","level":"INFO","message":"🛑 Señal SIGINT recibida, cerrando servidor..."}
+{"timestamp":"2025-09-24T09:07:03.673Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T09:07:04.087Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T09:07:04.089Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T09:07:04.105Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T09:07:04.106Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T09:07:04.113Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T09:07:04.116Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T09:09:41.299Z","level":"INFO","message":"🛑 Señal SIGINT recibida, cerrando servidor..."}
+{"timestamp":"2025-09-24T09:09:44.179Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T09:09:44.583Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T09:09:44.585Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T09:09:44.597Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T09:09:44.599Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T09:09:44.604Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T09:09:44.606Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T09:13:01.743Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T09:13:02.174Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T09:13:02.176Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T09:13:02.189Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T09:13:02.190Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T09:13:02.196Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T09:13:02.198Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T09:28:01.420Z","level":"INFO","message":"Métricas del sistema","total_requests":0,"error_rate":"0%","active_sessions":0,"memory_heap":"23MB","category":"metrics"}
+{"timestamp":"2025-09-24T09:34:18.871Z","level":"WARN","message":"POST /api/test - 404","userId":"anonymous","method":"POST","endpoint":"/api/test","statusCode":404,"responseTime":0,"category":"api"}
+{"timestamp":"2025-09-24T09:34:24.084Z","level":"INFO","message":"Test de logging iniciado"}
+{"timestamp":"2025-09-24T09:34:24.084Z","level":"SUCCESS","message":"Test exitoso"}
+{"timestamp":"2025-09-24T09:34:24.085Z","level":"WARN","message":"Test de advertencia"}
+{"timestamp":"2025-09-24T09:34:24.086Z","level":"DEBUG","message":"Test de debug"}
+{"timestamp":"2025-09-24T09:34:24.086Z","level":"ERROR","message":"Test de error","error":{"name":"Error","message":"Error de prueba","stack":"Error: Error de prueba\n    at LoggerService.runTest (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\services\\LoggerService.js:364:33)\n    at C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\server.js:86:24\n    at Layer.handleRequest (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:582:12)\n    at next (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:291:5)\n    at C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\services\\LoggerService.js:275:7\n    at Layer.handleRequest (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:342:13)\n    at C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:297:9\n    at processParams (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:582:12)\n    at next (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\node_modules\\router\\index.js:291:5)"}}
+{"timestamp":"2025-09-24T09:34:24.088Z","level":"SUCCESS","message":"CV subido exitosamente","userId":123,"filename":"test-cv.pdf","size":"2.5MB","category":"cv"}
+{"timestamp":"2025-09-24T09:34:24.089Z","level":"INFO","message":"Usuario autenticado","userId":123,"email":"test@email.com","method":"google","category":"auth"}
+{"timestamp":"2025-09-24T09:34:24.090Z","level":"INFO","message":"Solicitud enviada a IA","userId":123,"service":"llama","prompt_length":150,"category":"ai"}
+{"timestamp":"2025-09-24T09:34:27.419Z","level":"WARN","message":"Request lenta detectada","method":"GET","endpoint":"/api/test","response_time":3336,"status_code":200,"user_id":"anonymous","memory_delta":{"heap_used":358704,"rss":356352}}
+{"timestamp":"2025-09-24T09:34:27.420Z","level":"INFO","message":"GET /api/test - 200","userId":"anonymous","method":"GET","endpoint":"/api/test","statusCode":200,"responseTime":3337,"category":"api"}
+{"timestamp":"2025-09-24T09:34:27.421Z","level":"WARN","message":"Request lenta detectada","method":"GET","endpoint":"/api/test","response_time":3338,"status_code":200,"user_id":"anonymous","memory_delta":{"heap_used":395072,"rss":425984}}
+{"timestamp":"2025-09-24T09:35:44.901Z","level":"WARN","message":"GET /api/metrics - 401","userId":"anonymous","method":"GET","endpoint":"/api/metrics","statusCode":401,"responseTime":0,"category":"api"}
+{"timestamp":"2025-09-24T09:36:07.495Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":186,"category":"api"}
+{"timestamp":"2025-09-24T09:36:22.834Z","level":"INFO","message":"GET /api/metrics - 200","userId":5,"method":"GET","endpoint":"/api/metrics","statusCode":200,"responseTime":3,"category":"api"}
+{"timestamp":"2025-09-24T09:37:53.035Z","level":"INFO","message":"GET /api/health - 200","userId":"anonymous","method":"GET","endpoint":"/api/health","statusCode":200,"responseTime":8,"category":"api"}
+{"timestamp":"2025-09-24T09:42:14.750Z","level":"INFO","message":"🛑 Señal SIGINT recibida, cerrando servidor..."}
+{"timestamp":"2025-09-24T09:42:17.333Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T09:42:17.744Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T09:42:17.746Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T09:42:17.760Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T09:42:17.761Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T09:42:17.767Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T09:42:17.770Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T09:56:48.586Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":269,"category":"api"}
+{"timestamp":"2025-09-24T09:57:17.027Z","level":"INFO","message":"Métricas del sistema","total_requests":1,"error_rate":"0.00%","avg_response_time":271,"active_sessions":0,"memory_heap":"24MB","category":"metrics"}
+{"timestamp":"2025-09-24T09:57:20.599Z","level":"INFO","message":"GET /api/cv/ - 200","userId":5,"method":"GET","endpoint":"/api/cv/","statusCode":200,"responseTime":45,"category":"api"}
+{"timestamp":"2025-09-24T10:00:48.214Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:02:13.310Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T10:02:52.490Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T10:03:05.253Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:03:08.506Z","level":"WARN","message":"POST /api/cv - 404","userId":5,"method":"POST","endpoint":"/api/cv","statusCode":404,"responseTime":0,"category":"api"}
+{"timestamp":"2025-09-24T10:03:10.426Z","level":"WARN","message":"POST /api/cv - 404","userId":5,"method":"POST","endpoint":"/api/cv","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:03:12.643Z","level":"WARN","message":"GET /api/cv - 401","userId":"anonymous","method":"GET","endpoint":"/api/cv","statusCode":401,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:03:13.215Z","level":"WARN","message":"GET /favicon.ico - 404","userId":"anonymous","method":"GET","endpoint":"/favicon.ico","statusCode":404,"responseTime":0,"category":"api"}
+{"timestamp":"2025-09-24T10:03:28.716Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":136,"category":"api"}
+{"timestamp":"2025-09-24T10:04:02.060Z","level":"WARN","message":"POST /api/cv - 404","userId":5,"method":"POST","endpoint":"/api/cv","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:04:21.213Z","level":"WARN","message":"POST /api/cv - 404","userId":5,"method":"POST","endpoint":"/api/cv","statusCode":404,"responseTime":0,"category":"api"}
+{"timestamp":"2025-09-24T10:04:24.962Z","level":"WARN","message":"POST /api/cv - 404","userId":5,"method":"POST","endpoint":"/api/cv","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:04:31.711Z","level":"WARN","message":"POST /api/cv - 404","userId":5,"method":"POST","endpoint":"/api/cv","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:05:21.386Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T10:07:22.388Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T10:12:17.017Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T10:12:17.032Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T10:27:17.035Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T10:42:17.021Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T10:42:17.037Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T10:57:17.047Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T11:12:17.033Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T11:12:17.048Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T11:27:17.057Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T11:42:17.038Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T11:42:17.069Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T12:04:05.593Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T12:12:17.042Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T12:19:05.601Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T12:59:35.117Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T12:59:35.193Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T14:08:06.406Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T14:08:06.415Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T15:55:54.599Z","level":"INFO","message":"Métricas del sistema","total_requests":17,"error_rate":"164.71%","avg_response_time":27.97,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T15:55:54.674Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T16:06:44.047Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T16:06:44.562Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T16:06:44.566Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T16:06:44.649Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T16:06:44.650Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T16:06:44.659Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T16:06:44.661Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T16:06:52.733Z","level":"INFO","message":"🛑 Señal SIGINT recibida, cerrando servidor..."}
+{"timestamp":"2025-09-24T16:18:44.920Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T16:18:45.356Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T16:18:45.357Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T16:18:45.372Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T16:18:45.373Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T16:18:45.380Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T16:18:45.382Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T16:21:18.463Z","level":"WARN","message":"POST /api/cv/upload - 403","userId":"anonymous","method":"POST","endpoint":"/api/cv/upload","statusCode":403,"responseTime":5,"category":"api"}
+{"timestamp":"2025-09-24T16:21:26.059Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":141,"category":"api"}
+{"timestamp":"2025-09-24T16:21:39.848Z","level":"WARN","message":"POST /api/cv/upload - 400","userId":5,"method":"POST","endpoint":"/api/cv/upload","statusCode":400,"responseTime":4,"category":"api"}
+{"timestamp":"2025-09-24T16:22:00.032Z","level":"WARN","message":"POST /api/cv/upload - 400","userId":5,"method":"POST","endpoint":"/api/cv/upload","statusCode":400,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T16:22:30.419Z","level":"WARN","message":"POST /api/cv/ - 404","userId":5,"method":"POST","endpoint":"/api/cv/","statusCode":404,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T16:22:55.695Z","level":"INFO","message":"GET /api/cv - 200","userId":5,"method":"GET","endpoint":"/api/cv","statusCode":200,"responseTime":45,"category":"api"}
+{"timestamp":"2025-09-24T16:23:13.362Z","level":"WARN","message":"POST /api/cv/upload - 400","userId":5,"method":"POST","endpoint":"/api/cv/upload","statusCode":400,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T16:23:58.417Z","level":"WARN","message":"POST /api/cv/upload/ - 400","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":400,"responseTime":1,"category":"api"}
+{"timestamp":"2025-09-24T16:24:26.901Z","level":"WARN","message":"POST /api/cv/upload/ - 400","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":400,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T16:26:49.639Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":90,"category":"api"}
+{"timestamp":"2025-09-24T16:33:39.336Z","level":"INFO","message":"GET /api/cv - 200","userId":5,"method":"GET","endpoint":"/api/cv","statusCode":200,"responseTime":45,"category":"api"}
+{"timestamp":"2025-09-24T16:33:44.520Z","level":"INFO","message":"Métricas del sistema","total_requests":11,"error_rate":"127.27%","avg_response_time":31.5,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T16:48:44.527Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T16:48:44.528Z","level":"INFO","message":"Métricas del sistema","total_requests":11,"error_rate":"127.27%","avg_response_time":31.5,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T17:03:44.540Z","level":"INFO","message":"Métricas del sistema","total_requests":11,"error_rate":"127.27%","avg_response_time":31.5,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T17:17:59.024Z","level":"WARN","message":"POST /api/cv/1/procesar - 403","userId":"anonymous","method":"POST","endpoint":"/api/cv/1/procesar","statusCode":403,"responseTime":5,"category":"api"}
+{"timestamp":"2025-09-24T17:18:05.360Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":270,"category":"api"}
+{"timestamp":"2025-09-24T17:18:16.989Z","level":"INFO","message":"POST /api/cv/1/procesar - 200","userId":5,"method":"POST","endpoint":"/api/cv/1/procesar","statusCode":200,"responseTime":51,"category":"api"}
+{"timestamp":"2025-09-24T17:18:44.525Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T17:18:44.541Z","level":"INFO","message":"Métricas del sistema","total_requests":14,"error_rate":"114.29%","avg_response_time":48.25,"active_sessions":0,"memory_heap":"25MB","category":"metrics"}
+{"timestamp":"2025-09-24T17:21:26.158Z","level":"INFO","message":"POST /api/cv/1/informe - 201","userId":5,"method":"POST","endpoint":"/api/cv/1/informe","statusCode":201,"responseTime":189,"category":"api"}
+{"timestamp":"2025-09-24T17:26:33.289Z","level":"WARN","message":"DELETE /api/cv/1 - 500","userId":5,"method":"DELETE","endpoint":"/api/cv/1","statusCode":500,"responseTime":61,"category":"api"}
+{"timestamp":"2025-09-24T17:27:02.807Z","level":"WARN","message":"DELETE /api/cv/1 - 500","userId":5,"method":"DELETE","endpoint":"/api/cv/1","statusCode":500,"responseTime":165,"category":"api"}
+{"timestamp":"2025-09-24T17:27:56.005Z","level":"WARN","message":"DELETE /api/cv/1 - 500","userId":5,"method":"DELETE","endpoint":"/api/cv/1","statusCode":500,"responseTime":45,"category":"api"}
+{"timestamp":"2025-09-24T17:33:44.545Z","level":"INFO","message":"Métricas del sistema","total_requests":18,"error_rate":"122.22%","avg_response_time":63.25,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-24T17:48:44.532Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-24T17:48:44.547Z","level":"INFO","message":"Métricas del sistema","total_requests":18,"error_rate":"122.22%","avg_response_time":63.25,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-24T17:49:51.596Z","level":"INFO","message":"GET /api/health - 200","userId":"anonymous","method":"GET","endpoint":"/api/health","statusCode":200,"responseTime":13,"category":"api"}
+{"timestamp":"2025-09-24T17:50:29.531Z","level":"INFO","message":"🛑 Señal SIGINT recibida, cerrando servidor..."}
+{"timestamp":"2025-09-24T17:51:27.433Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T17:51:27.877Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T17:51:27.879Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T17:51:27.895Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T17:51:27.896Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T17:51:27.904Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T17:51:27.906Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:06:15.225Z","level":"INFO","message":"Métricas del sistema","total_requests":0,"error_rate":"0%","active_sessions":0,"memory_heap":"23MB","category":"metrics"}
+{"timestamp":"2025-09-24T18:12:25.626Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T18:12:26.029Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T18:12:26.031Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T18:12:26.046Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T18:12:26.047Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T18:12:26.052Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T18:12:26.054Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:14:32.366Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":161,"category":"api"}
+{"timestamp":"2025-09-24T18:15:37.246Z","level":"WARN","message":"POST /api/cv/upload/ - 403","userId":"anonymous","method":"POST","endpoint":"/api/cv/upload/","statusCode":403,"responseTime":2,"category":"api"}
+{"timestamp":"2025-09-24T18:15:47.265Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758737747139_5_CV_MaximoVentocillaLay.pdf","size":"83.96 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:15:47.266Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":135,"category":"api"}
+{"timestamp":"2025-09-24T18:16:09.950Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"2","filename":"uploads\\cvs\\1758737747139_5_CV_MaximoVentocillaLay.pdf"}
+{"timestamp":"2025-09-24T18:16:09.951Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:16:10.618Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":3085,"category":"ai"}
+{"timestamp":"2025-09-24T18:16:40.629Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"timeout of 30000ms exceeded","stack":"Error: timeout of 30000ms exceeded\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at listOnTimeout (node:internal/timers:540:9)\n    at process.processTimers (node:internal/timers:514:7)"}}
+{"timestamp":"2025-09-24T18:16:40.718Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/2/procesar","response_time":30837,"status_code":500,"user_id":5,"memory_delta":{"heap_used":5538456,"rss":8458240}}
+{"timestamp":"2025-09-24T18:16:40.722Z","level":"WARN","message":"POST /api/cv/2/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/2/procesar","statusCode":500,"responseTime":30841,"category":"api"}
+{"timestamp":"2025-09-24T18:16:40.723Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/2/procesar","response_time":30842,"status_code":500,"user_id":5,"memory_delta":{"heap_used":5589520,"rss":8458240}}
+{"timestamp":"2025-09-24T18:18:25.767Z","level":"INFO","message":"Generando informe detallado","user_id":5,"cv_id":"2"}
+{"timestamp":"2025-09-24T18:18:55.785Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/2/informe","response_time":30112,"status_code":500,"user_id":5,"memory_delta":{"heap_used":1056968,"rss":-45056}}
+{"timestamp":"2025-09-24T18:18:55.787Z","level":"WARN","message":"POST /api/cv/2/informe - 500","userId":5,"method":"POST","endpoint":"/api/cv/2/informe","statusCode":500,"responseTime":30114,"category":"api"}
+{"timestamp":"2025-09-24T18:18:55.791Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/2/informe","response_time":30118,"status_code":500,"user_id":5,"memory_delta":{"heap_used":1091056,"rss":-8192}}
+{"timestamp":"2025-09-24T18:20:45.929Z","level":"WARN","message":"POST /api/cv/1/procesar - 400","userId":5,"method":"POST","endpoint":"/api/cv/1/procesar","statusCode":400,"responseTime":69,"category":"api"}
+{"timestamp":"2025-09-24T18:20:55.236Z","level":"WARN","message":"POST /api/cv/2/procesar - 400","userId":5,"method":"POST","endpoint":"/api/cv/2/procesar","statusCode":400,"responseTime":4,"category":"api"}
+{"timestamp":"2025-09-24T18:21:05.802Z","level":"WARN","message":"POST /api/cv/1/informe - 400","userId":5,"method":"POST","endpoint":"/api/cv/1/informe","statusCode":400,"responseTime":14,"category":"api"}
+{"timestamp":"2025-09-24T18:22:02.393Z","level":"INFO","message":"Generando informe detallado","user_id":5,"cv_id":"2"}
+{"timestamp":"2025-09-24T18:22:32.400Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/2/informe","response_time":30096,"status_code":500,"user_id":5,"memory_delta":{"heap_used":690096,"rss":663552}}
+{"timestamp":"2025-09-24T18:22:32.402Z","level":"WARN","message":"POST /api/cv/2/informe - 500","userId":5,"method":"POST","endpoint":"/api/cv/2/informe","statusCode":500,"responseTime":30098,"category":"api"}
+{"timestamp":"2025-09-24T18:22:32.407Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/2/informe","response_time":30103,"status_code":500,"user_id":5,"memory_delta":{"heap_used":717880,"rss":692224}}
+{"timestamp":"2025-09-24T18:24:50.868Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758738290784_5_Adrian_NuÃ±uvero_Ochoa_-_CV.pdf","size":"150 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:24:50.869Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":88,"category":"api"}
+{"timestamp":"2025-09-24T18:25:03.515Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"3","filename":"uploads\\cvs\\1758738290784_5_Adrian_NuÃ±uvero_Ochoa_-_CV.pdf"}
+{"timestamp":"2025-09-24T18:25:03.516Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:25:03.569Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":1991,"category":"ai"}
+{"timestamp":"2025-09-24T18:25:33.584Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"timeout of 30000ms exceeded","stack":"Error: timeout of 30000ms exceeded\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at listOnTimeout (node:internal/timers:540:9)\n    at process.processTimers (node:internal/timers:514:7)"}}
+{"timestamp":"2025-09-24T18:25:33.652Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/3/procesar","response_time":30209,"status_code":500,"user_id":5,"memory_delta":{"heap_used":1211488,"rss":3100672}}
+{"timestamp":"2025-09-24T18:25:33.653Z","level":"WARN","message":"POST /api/cv/3/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/3/procesar","statusCode":500,"responseTime":30210,"category":"api"}
+{"timestamp":"2025-09-24T18:25:33.654Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/3/procesar","response_time":30211,"status_code":500,"user_id":5,"memory_delta":{"heap_used":1242824,"rss":3166208}}
+{"timestamp":"2025-09-24T18:27:25.262Z","level":"INFO","message":"Métricas del sistema","total_requests":11,"error_rate":"145.45%","avg_response_time":11067.36,"active_sessions":0,"memory_heap":"32MB","category":"metrics"}
+{"timestamp":"2025-09-24T18:31:48.343Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T18:31:48.755Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T18:31:48.757Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T18:31:48.770Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T18:31:48.771Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T18:31:48.777Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T18:31:48.778Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:32:39.892Z","level":"WARN","message":"POST /api/cv/3/procesar - 403","userId":"anonymous","method":"POST","endpoint":"/api/cv/3/procesar","statusCode":403,"responseTime":6,"category":"api"}
+{"timestamp":"2025-09-24T18:32:45.723Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":171,"category":"api"}
+{"timestamp":"2025-09-24T18:33:33.669Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758738813578_5_paulo_cv-1.pdf","size":"535.22 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:33:33.671Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":101,"category":"api"}
+{"timestamp":"2025-09-24T18:33:44.865Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"4","filename":"uploads\\cvs\\1758738813578_5_paulo_cv-1.pdf"}
+{"timestamp":"2025-09-24T18:33:44.866Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:33:45.149Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":2215,"category":"ai"}
+{"timestamp":"2025-09-24T18:34:15.173Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"timeout of 30000ms exceeded","stack":"Error: timeout of 30000ms exceeded\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at listOnTimeout (node:internal/timers:540:9)\n    at process.processTimers (node:internal/timers:514:7)"}}
+{"timestamp":"2025-09-24T18:34:15.244Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/4/procesar","response_time":30457,"status_code":500,"user_id":5,"memory_delta":{"heap_used":6893424,"rss":16617472}}
+{"timestamp":"2025-09-24T18:34:15.245Z","level":"WARN","message":"POST /api/cv/4/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/4/procesar","statusCode":500,"responseTime":30459,"category":"api"}
+{"timestamp":"2025-09-24T18:34:15.246Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/4/procesar","response_time":30460,"status_code":500,"user_id":5,"memory_delta":{"heap_used":6929496,"rss":16625664}}
+{"timestamp":"2025-09-24T18:43:02.763Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T18:43:03.167Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T18:43:03.169Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T18:43:03.192Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T18:43:03.193Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T18:43:03.199Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T18:43:03.201Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:44:06.357Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758739446270_5_CV_MaximoVentocillaLay.pdf","size":"83.96 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:44:06.359Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":93,"category":"api"}
+{"timestamp":"2025-09-24T18:44:15.221Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"5","filename":"uploads\\cvs\\1758739446270_5_CV_MaximoVentocillaLay.pdf"}
+{"timestamp":"2025-09-24T18:44:15.222Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:44:15.366Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":3085,"category":"ai"}
+{"timestamp":"2025-09-24T18:44:45.379Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"timeout of 30000ms exceeded","stack":"Error: timeout of 30000ms exceeded\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at listOnTimeout (node:internal/timers:540:9)\n    at process.processTimers (node:internal/timers:514:7)"}}
+{"timestamp":"2025-09-24T18:44:45.447Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/5/procesar","response_time":30237,"status_code":500,"user_id":5,"memory_delta":{"heap_used":7240096,"rss":9404416}}
+{"timestamp":"2025-09-24T18:44:45.448Z","level":"WARN","message":"POST /api/cv/5/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/5/procesar","statusCode":500,"responseTime":30239,"category":"api"}
+{"timestamp":"2025-09-24T18:44:45.449Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/5/procesar","response_time":30240,"status_code":500,"user_id":5,"memory_delta":{"heap_used":7275208,"rss":9404416}}
+{"timestamp":"2025-09-24T18:49:04.848Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T18:49:05.399Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T18:49:05.401Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T18:49:05.415Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T18:49:05.416Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T18:49:05.422Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T18:49:05.423Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:53:15.717Z","level":"WARN","message":"POST /api/cv/5/procesar - 403","userId":"anonymous","method":"POST","endpoint":"/api/cv/5/procesar","statusCode":403,"responseTime":4,"category":"api"}
+{"timestamp":"2025-09-24T18:53:20.625Z","level":"INFO","message":"POST /api/auth/login - 200","userId":"anonymous","method":"POST","endpoint":"/api/auth/login","statusCode":200,"responseTime":178,"category":"api"}
+{"timestamp":"2025-09-24T18:53:39.216Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758740019142_5_CV_MaximoVentocillaLay.pdf","size":"83.96 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:53:39.217Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":83,"category":"api"}
+{"timestamp":"2025-09-24T18:53:49.695Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"6","filename":"uploads\\cvs\\1758740019142_5_CV_MaximoVentocillaLay.pdf"}
+{"timestamp":"2025-09-24T18:53:49.696Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:53:49.914Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":3085,"category":"ai"}
+{"timestamp":"2025-09-24T18:54:19.936Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"timeout of 30000ms exceeded","stack":"Error: timeout of 30000ms exceeded\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at listOnTimeout (node:internal/timers:540:9)\n    at process.processTimers (node:internal/timers:514:7)"}}
+{"timestamp":"2025-09-24T18:54:20.024Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/6/procesar","response_time":30403,"status_code":500,"user_id":5,"memory_delta":{"heap_used":5948168,"rss":11055104}}
+{"timestamp":"2025-09-24T18:54:20.026Z","level":"WARN","message":"POST /api/cv/6/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/6/procesar","statusCode":500,"responseTime":30405,"category":"api"}
+{"timestamp":"2025-09-24T18:54:20.029Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/6/procesar","response_time":30408,"status_code":500,"user_id":5,"memory_delta":{"heap_used":5984288,"rss":11063296}}
+{"timestamp":"2025-09-24T18:54:50.325Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T18:54:50.911Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T18:54:50.914Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T18:54:50.926Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T18:54:50.927Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T18:54:50.932Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T18:54:50.934Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:54:58.808Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758740098789_5_CV_MaximoVentocillaLay.pdf","size":"83.96 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:54:58.811Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":29,"category":"api"}
+{"timestamp":"2025-09-24T18:55:06.691Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"7","filename":"uploads\\cvs\\1758740098789_5_CV_MaximoVentocillaLay.pdf"}
+{"timestamp":"2025-09-24T18:55:06.693Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:55:06.920Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":3085,"category":"ai"}
+{"timestamp":"2025-09-24T18:56:06.938Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"timeout of 60000ms exceeded","stack":"Error: timeout of 60000ms exceeded\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at listOnTimeout (node:internal/timers:540:9)\n    at process.processTimers (node:internal/timers:514:7)"}}
+{"timestamp":"2025-09-24T18:56:07.026Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/7/procesar","response_time":60352,"status_code":500,"user_id":5,"memory_delta":{"heap_used":6498152,"rss":11116544}}
+{"timestamp":"2025-09-24T18:56:07.028Z","level":"WARN","message":"POST /api/cv/7/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/7/procesar","statusCode":500,"responseTime":60354,"category":"api"}
+{"timestamp":"2025-09-24T18:56:07.029Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/7/procesar","response_time":60355,"status_code":500,"user_id":5,"memory_delta":{"heap_used":6535296,"rss":11124736}}
+{"timestamp":"2025-09-24T18:56:57.961Z","level":"INFO","message":"🔄 Sincronizando base de datos..."}
+{"timestamp":"2025-09-24T18:56:58.397Z","level":"SUCCESS","message":"✅ Base de datos conectada","category":"system"}
+{"timestamp":"2025-09-24T18:56:58.399Z","level":"INFO","message":"🧪 Verificando servicios..."}
+{"timestamp":"2025-09-24T18:56:58.412Z","level":"SUCCESS","message":"✅ Llama 3.1 conectado correctamente"}
+{"timestamp":"2025-09-24T18:56:58.413Z","level":"INFO","message":"🧪 Ejecutando tests de servicios..."}
+{"timestamp":"2025-09-24T18:56:58.417Z","level":"SUCCESS","message":"🚀 Servidor iniciado en puerto 3000","port":3000,"category":"system"}
+{"timestamp":"2025-09-24T18:56:58.420Z","level":"INFO","message":"📋 API Endpoints disponibles","auth":"POST /api/auth/{register,login,google,refresh,logout}","cv":"GET,POST,DELETE /api/cv + procesamiento IA","entrevistas":"POST /api/entrevistas + chat IA","informes":"GET /api/informes + generación PDF","dashboard":"GET /api/dashboard + analytics","system":"GET /api/{health,metrics,test}","category":"startup"}
+{"timestamp":"2025-09-24T18:57:02.686Z","level":"SUCCESS","message":"CV subido exitosamente","userId":5,"filename":"1758740222672_5_CV_MaximoVentocillaLay.pdf","size":"83.96 KB","category":"cv"}
+{"timestamp":"2025-09-24T18:57:02.688Z","level":"INFO","message":"POST /api/cv/upload/ - 201","userId":5,"method":"POST","endpoint":"/api/cv/upload/","statusCode":201,"responseTime":22,"category":"api"}
+{"timestamp":"2025-09-24T18:57:08.310Z","level":"INFO","message":"Iniciando procesamiento de CV","user_id":5,"cv_id":"8","filename":"uploads\\cvs\\1758740222672_5_CV_MaximoVentocillaLay.pdf"}
+{"timestamp":"2025-09-24T18:57:08.312Z","level":"INFO","message":"Extrayendo texto del archivo..."}
+{"timestamp":"2025-09-24T18:57:08.534Z","level":"INFO","message":"Solicitud enviada a IA","userId":5,"service":"cv_analysis","prompt_length":3085,"category":"ai"}
+{"timestamp":"2025-09-24T18:58:36.471Z","level":"ERROR","message":"Error en servicio de IA","userId":5,"service":"cv_analysis","category":"ai","error":{"name":"Error","message":"Unexpected token '`', \"```json\n{\n\"... is not valid JSON","stack":"Error: Unexpected token '`', \"```json\n{\n\"... is not valid JSON\n    at procesarCV (C:\\3.0_InteArtiCv_Back\\backend-alumnos\\src\\controllers\\CVController.js:122:49)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}}
+{"timestamp":"2025-09-24T18:58:36.537Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/8/procesar","response_time":88244,"status_code":500,"user_id":5,"memory_delta":{"heap_used":6513640,"rss":15843328}}
+{"timestamp":"2025-09-24T18:58:36.539Z","level":"WARN","message":"POST /api/cv/8/procesar - 500","userId":5,"method":"POST","endpoint":"/api/cv/8/procesar","statusCode":500,"responseTime":88246,"category":"api"}
+{"timestamp":"2025-09-24T18:58:36.540Z","level":"WARN","message":"Request lenta detectada","method":"POST","endpoint":"/api/cv/8/procesar","response_time":88247,"status_code":500,"user_id":5,"memory_delta":{"heap_used":6550784,"rss":15851520}}

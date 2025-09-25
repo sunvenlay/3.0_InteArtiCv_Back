@@ -5,7 +5,7 @@ class LlamaService {
     this.baseURL = process.env.LLAMA_BASE_URL || 'http://127.0.0.1:1234';
     this.client = axios.create({
       baseURL: this.baseURL,
-      timeout: 120000, // 120 segundos
+      timeout: 80000, // 60 segundos
       headers: {
         'Content-Type': 'application/json'
       }
@@ -72,125 +72,148 @@ class LlamaService {
 }
 
   // 📄 RF-102: Analizar contenido de CV
-  async analizarCV(contenidoTexto, nombreAlumno = '') {
-    const prompt = `
-Eres un experto en análisis de currículums vitae. Analiza el siguiente CV y extrae información estructurada.
+async analizarCV(contenidoTexto, nombreAlumno = '') {
+  const prompt = `Analiza este CV y responde ÚNICAMENTE con un objeto JSON válido (sin markdown, sin explicaciones):
 
-CV de ${nombreAlumno}:
-${contenidoTexto}
+{
+  "fortalezas": ["fortaleza1", "fortaleza2"],
+  "habilidades_tecnicas": ["habilidad1", "habilidad2"],
+  "habilidades_blandas": ["habilidad1", "habilidad2"],
+  "areas_mejora": ["area1", "area2"],
+  "experiencia_resumen": "resumen breve",
+  "educacion_resumen": "resumen breve"
+}
 
-Por favor proporciona un análisis detallado en formato JSON con:
-1. **fortalezas**: Array de principales fortalezas identificadas
-2. **habilidades_tecnicas**: Array de habilidades técnicas encontradas
-3. **habilidades_blandas**: Array de habilidades blandas identificadas
-4. **areas_mejora**: Array de áreas que podrían mejorarse
-5. **experiencia_resumen**: Resumen de la experiencia laboral
-6. **educacion_resumen**: Resumen de la formación académica
-7. **puntos_destacados**: Aspectos más llamativos del perfil
+CV a analizar:
+${contenidoTexto.substring(0, 1500)}`;
 
-Responde ÚNICAMENTE con el JSON, sin texto adicional.`;
-
-    const messages = [
-      {
-        role: 'system',
-        content: 'Eres un experto analista de recursos humanos especializado en análisis de CVs. Respondes siempre en formato JSON válido.'
-      },
-      {
-        role: 'user',
-        content: prompt
-      }
-    ];
-
-    try {
-      const response = await this.chatCompletion(messages, {
-        temperature: 0.3, // Más determinista para análisis
-        max_tokens: 1500
-      });
-
-      if (!response.success) {
-        throw new Error(response.error);
-      }
-
-      // Intentar parsear JSON
-      const analisis = JSON.parse(response.content);
-      
-      return {
-        success: true,
-        analisis: analisis,
-        contenido_extraido: response.content
-      };
-    } catch (error) {
-      console.error('❌ Error analizando CV:', error);
-      return {
-        success: false,
-        error: error.message,
-        fallback_content: contenidoTexto.substring(0, 500) + '...'
-      };
+  const messages = [
+    {
+      role: 'system',
+      content: 'Eres un analista de recursos humanos. Responde ÚNICAMENTE con JSON válido, sin markdown ni explicaciones adicionales.'
+    },
+    {
+      role: 'user',
+      content: prompt
     }
+  ];
+
+  try {
+    const response = await this.chatCompletion(messages, {
+      temperature: 0.2, // Más determinista
+      max_tokens: 600
+    });
+
+    if (!response.success) {
+      throw new Error(response.error);
+    }
+
+    // Limpiar la respuesta de markdown y caracteres extraños
+    let cleanContent = response.content
+      .replace(/```json\s*/, '')  // Remover ```json al inicio
+      .replace(/```\s*$/, '')     // Remover ``` al final
+      .replace(/^\s*["']{3}\s*/, '') // Remover """ al inicio
+      .replace(/\s*["']{3}\s*$/, '') // Remover """ al final
+      .trim();
+
+    // Buscar el JSON dentro del contenido
+    const jsonMatch = cleanContent.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      cleanContent = jsonMatch[0];
+    }
+
+    console.log('Respuesta limpia de IA:', cleanContent);
+
+    const analisis = JSON.parse(cleanContent);
+    
+    return {
+      success: true,
+      analisis: analisis,
+      contenido_extraido: response.content
+    };
+  } catch (error) {
+    console.error('Error analizando CV:', error);
+    console.error('Contenido recibido:', response?.content);
+    
+    // Fallback con estructura básica
+    return {
+      success: false,
+      error: error.message,
+      fallback_content: contenidoTexto.substring(0, 500) + '...'
+    };
   }
+}
 
   // 🎯 RF-105: Evaluar respuesta de entrevista
-  async evaluarRespuestaEntrevista(pregunta, respuesta, contexto = '') {
-    const prompt = `
-Eres un experto entrevistador de recursos humanos. Evalúa esta respuesta de entrevista laboral.
+async evaluarRespuestaEntrevista(pregunta, respuesta, contexto = '') {
+  const prompt = `Evalúa esta respuesta de entrevista y responde ÚNICAMENTE con JSON válido:
 
-**Pregunta:** ${pregunta}
-**Respuesta del candidato:** ${respuesta}
-${contexto ? `**Contexto:** ${contexto}` : ''}
+{
+  "puntuacion": 8,
+  "retroalimentacion": "feedback específico",
+  "fortalezas": ["fortaleza1", "fortaleza2"],
+  "areas_mejora": ["mejora1", "mejora2"],
+  "sugerencias": ["sugerencia1", "sugerencia2"]
+}
 
-Proporciona una evaluación en formato JSON con:
-1. **puntuacion**: Número del 1-10 (10 = excelente)
-2. **retroalimentacion**: Feedback constructivo específico
-3. **fortalezas**: Array de aspectos positivos identificados
-4. **areas_mejora**: Array de aspectos a mejorar
-5. **sugerencias**: Array de consejos específicos para mejorar
-6. **ejemplos_mejores**: Ejemplo de cómo podría responder mejor
+Pregunta: ${pregunta}
+Respuesta: ${respuesta}`;
 
-Sé constructivo y específico en tus comentarios.
-Responde ÚNICAMENTE con el JSON, sin texto adicional.`;
-
-    const messages = [
-      {
-        role: 'system',
-        content: 'Eres un experto entrevistador de RRHH. Evalúas respuestas de forma constructiva y objetiva. Siempre respondes en JSON válido.'
-      },
-      {
-        role: 'user',
-        content: prompt
-      }
-    ];
-
-    try {
-      const response = await this.chatCompletion(messages, {
-        temperature: 0.4,
-        max_tokens: 1000
-      });
-
-      if (!response.success) {
-        throw new Error(response.error);
-      }
-
-      const evaluacion = JSON.parse(response.content);
-      
-      return {
-        success: true,
-        evaluacion: evaluacion
-      };
-    } catch (error) {
-      console.error('❌ Error evaluando respuesta:', error);
-      return {
-        success: false,
-        error: error.message,
-        fallback: {
-          puntuacion: 7,
-          retroalimentacion: 'Respuesta registrada. Evaluación pendiente.',
-          fortalezas: ['Participación activa'],
-          areas_mejora: ['Evaluación pendiente'],
-          sugerencias: ['Continúa practicando']
-        }
-      };
+  const messages = [
+    {
+      role: 'system',
+      content: 'Eres un entrevistador de RRHH. Responde ÚNICAMENTE con JSON válido, sin markdown.'
+    },
+    {
+      role: 'user',
+      content: prompt
     }
+  ];
+
+  try {
+    const response = await this.chatCompletion(messages, {
+      temperature: 0.3,
+      max_tokens: 400
+    });
+
+    if (!response.success) {
+      throw new Error(response.error);
+    }
+
+    // Misma limpieza que arriba
+    let cleanContent = response.content
+      .replace(/```json\s*/, '')
+      .replace(/```\s*$/, '')
+      .replace(/^\s*["']{3}\s*/, '')
+      .replace(/\s*["']{3}\s*$/, '')
+      .trim();
+
+    const jsonMatch = cleanContent.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      cleanContent = jsonMatch[0];
+    }
+
+    const evaluacion = JSON.parse(cleanContent);
+    
+    return {
+      success: true,
+      evaluacion: evaluacion
+    };
+  } catch (error) {
+    console.error('Error evaluando respuesta:', error);
+    return {
+      success: false,
+      error: error.message,
+      fallback: {
+        puntuacion: 7,
+        retroalimentacion: 'Respuesta registrada. Evaluación pendiente.',
+        fortalezas: ['Participación activa'],
+        areas_mejora: ['Evaluación pendiente'],
+        sugerencias: ['Continúa practicando']
+      }
+    };
   }
+}
 
   // 🤖 RF-104: Generar pregunta de seguimiento inteligente
   async generarPreguntaSeguimiento(preguntaAnterior, respuestaAnterior, tipoEntrevista = 'general') {

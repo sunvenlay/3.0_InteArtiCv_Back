@@ -145,7 +145,7 @@ class CVController {
       });
 
       // 5. Crear/actualizar habilidades detectadas
-      await this.procesarHabilidadesDetectadas(cv, analisisIA.analisis);
+      await CVController.procesarHabilidadesDetectadas(cv, analisisIA.analisis);
 
       const processingTime = Date.now() - startTime;
       logger.cvProcessed(alumnoId, cvId, processingTime);
@@ -183,36 +183,36 @@ class CVController {
     }
   }
 
-  // 🔧 Helper: Procesar habilidades detectadas por IA
-  static async procesarHabilidadesDetectadas(cv, analisisIA) {
-    try {
-      // Obtener tipos de habilidades
-      const tipoTecnica = await TipoHabilidad.findOne({ where: { nombre: 'Técnica' } });
-      const tipoBlanda = await TipoHabilidad.findOne({ where: { nombre: 'Blanda' } });
+// 🔧 Helper: Procesar habilidades detectadas por IA
+static async procesarHabilidadesDetectadas(cv, analisisIA) {
+  try {
+    // Obtener tipos de habilidades
+    const tipoTecnica = await TipoHabilidad.findOne({ where: { nombre: 'Técnica' } });
+    const tipoBlanda = await TipoHabilidad.findOne({ where: { nombre: 'Blanda' } });
 
-      if (!tipoTecnica || !tipoBlanda) {
-        logger.warn("Tipos de habilidad no encontrados en BD");
-        return;
-      }
-
-      // Procesar habilidades técnicas
-      if (analisisIA.habilidades_tecnicas) {
-        for (const habilidadNombre of analisisIA.habilidades_tecnicas) {
-          await this.crearOAsociarHabilidad(cv.id, habilidadNombre, tipoTecnica.id);
-        }
-      }
-
-      // Procesar habilidades blandas
-      if (analisisIA.habilidades_blandas) {
-        for (const habilidadNombre of analisisIA.habilidades_blandas) {
-          await this.crearOAsociarHabilidad(cv.id, habilidadNombre, tipoBlanda.id);
-        }
-      }
-
-    } catch (error) {
-      logger.error("Error procesando habilidades detectadas", error);
+    if (!tipoTecnica || !tipoBlanda) {
+      logger.warn("Tipos de habilidad no encontrados en BD");
+      return;
     }
+
+    // Procesar habilidades técnicas
+    if (analisisIA.habilidades_tecnicas) {
+      for (const habilidadNombre of analisisIA.habilidades_tecnicas) {
+        await CVController.crearOAsociarHabilidad(cv.id, habilidadNombre, tipoTecnica.id);
+      }
+    }
+
+    // Procesar habilidades blandas
+    if (analisisIA.habilidades_blandas) {
+      for (const habilidadNombre of analisisIA.habilidades_blandas) {
+        await CVController.crearOAsociarHabilidad(cv.id, habilidadNombre, tipoBlanda.id);
+      }
+    }
+
+  } catch (error) {
+    logger.error("Error procesando habilidades detectadas", error);
   }
+}
 
   // 🔧 Helper: Crear o asociar habilidad
   static async crearOAsociarHabilidad(cvId, habilidadNombre, tipoId) {
@@ -455,26 +455,107 @@ class CVController {
     }
   }
 
-  // 🗑️ Eliminar CV
+// 🗑️ Eliminar CV
   static async eliminarCV(req, res) {
+    const sequelize = require('../config/database');
+    const transaction = await sequelize.transaction();
+    
     try {
       const { cvId } = req.params;
       const alumnoId = req.user.id;
 
       const cv = await CV.findOne({
-        where: { id: cvId, alumnoId }
+        where: { id: cvId, alumnoId },
+        include: [
+          {
+            model: Informe,
+            as: 'informes',
+            include: [
+              { model: InformeFortalezas, as: 'fortalezas' },
+              { model: InformeHabilidades, as: 'habilidades' },
+              { model: InformeAreasMejora, as: 'areas_mejora' }
+            ]
+          },
+          {
+            model: CVHabilidad,
+            as: 'cv_habilidades'
+          }
+        ]
       });
 
       if (!cv) {
+        await transaction.rollback();
         return res.status(404).json({ error: "CV no encontrado" });
       }
 
-      // TODO: Eliminar archivo físico del servidor
-      await cv.destroy();
+      logger.info("Eliminando CV y registros relacionados", {
+        user_id: alumnoId,
+        cv_id: cvId,
+        informes_count: cv.informes.length,
+        habilidades_count: cv.cv_habilidades.length
+      });
 
-      res.json({ message: "CV eliminado correctamente" });
+      // 1. Eliminar registros de informes en orden
+      for (const informe of cv.informes) {
+        // Eliminar detalles del informe
+        await InformeFortalezas.destroy({ 
+          where: { informeId: informe.id }, 
+          transaction 
+        });
+        
+        await InformeHabilidades.destroy({ 
+          where: { informeId: informe.id }, 
+          transaction 
+        });
+        
+        await InformeAreasMejora.destroy({ 
+          where: { informeId: informe.id }, 
+          transaction 
+        });
+        
+        // Eliminar el informe
+        await informe.destroy({ transaction });
+      }
+
+      // 2. Eliminar relaciones CV-Habilidades
+      await CVHabilidad.destroy({ 
+        where: { cvId }, 
+        transaction 
+      });
+
+      // 3. Eliminar archivo físico del servidor
+      const { deleteFile } = require('../middlewares/uploadMiddleware');
+      if (cv.archivo) {
+        deleteFile(cv.archivo);
+      }
+
+      // 4. Finalmente eliminar el CV
+      await cv.destroy({ transaction });
+
+      await transaction.commit();
+
+      logger.success("CV eliminado correctamente", {
+        user_id: alumnoId,
+        cv_id: cvId,
+        archivo: cv.archivo
+      });
+
+      res.json({ 
+        message: "CV y todos sus registros relacionados eliminados correctamente",
+        deleted: {
+          cv_id: cvId,
+          informes_eliminados: cv.informes.length,
+          habilidades_eliminadas: cv.cv_habilidades.length,
+          archivo_eliminado: !!cv.archivo
+        }
+      });
 
     } catch (error) {
+      await transaction.rollback();
+      logger.error("Error eliminando CV", error, {
+        user_id: req.user?.id,
+        cv_id: req.params.cvId
+      });
       res.status(500).json({ error: error.message });
     }
   }

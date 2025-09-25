@@ -1,0 +1,15 @@
+{"timestamp":"2025-09-25T00:06:07.089Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T00:21:07.041Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T00:27:58.771Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-25T00:36:07.045Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T00:51:07.052Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T00:57:58.777Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-25T01:22:40.112Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T01:46:15.812Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-25T01:46:16.147Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T02:01:16.150Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T02:16:15.830Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-25T02:16:16.162Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T02:31:16.175Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"26MB","category":"metrics"}
+{"timestamp":"2025-09-25T02:46:15.850Z","level":"INFO","message":"Métricas limpiadas","category":"monitoring"}
+{"timestamp":"2025-09-25T02:46:16.180Z","level":"INFO","message":"Métricas del sistema","total_requests":31,"error_rate":"45.16%","avg_response_time":35.94,"active_sessions":0,"memory_heap":"27MB","category":"metrics"}
